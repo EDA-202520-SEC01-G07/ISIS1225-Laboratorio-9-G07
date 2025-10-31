@@ -27,7 +27,8 @@
 import csv
 import time
 import os
-
+from DataStructures.List import array_list as al
+from DataStructures.Priority_queue import priority_queue as pq
 # TODO Realice la importación de priority queue
 # TODO Realice la importación de ArrayList (al) o SingleLinked (sl) como estructura de datos auxiliar para sus requerimientos
 
