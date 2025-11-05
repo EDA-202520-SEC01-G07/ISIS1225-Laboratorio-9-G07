@@ -1,5 +1,6 @@
 import sys
 import App.logic as logic
+from DataStructures.List import array_list as al
 # TODO Realice la importación de lista como estructura de datos auxiliar para la presentación de los resultados
 
 """

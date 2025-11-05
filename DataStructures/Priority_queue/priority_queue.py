@@ -83,6 +83,7 @@ def remove(heap):
     al.exchange(lista, 1, al.size(lista)-1)
     al.remove_last(lista)
     sink(heap, 1)
+    heap["size"] -= 1
     return pqe.get_value(elemento)
 
 def sink(heap, pos):
