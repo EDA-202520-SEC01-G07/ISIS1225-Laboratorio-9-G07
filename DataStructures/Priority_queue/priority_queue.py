@@ -114,22 +114,26 @@ def get_first_priority(heap):
         return al.get_element(heap["elements"],1)["value"]
     return None
 
-def is_present_value(heap, value):
-    lista = heap["elements"]
+def is_present_value(my_heap, value):
+    lista = my_heap["elements"]
     for i in range(1, al.size(lista)):
         elemento = al.get_element(lista, i)
         if pqe.get_value(elemento) == value:
             return i
     return -1
 
-def contains(heap, value):
-    pos = is_present_value(heap, value)
+def contains(my_heap, value):
+    pos = is_present_value(my_heap, value)
     if pos != -1:
         return True
     return False
     
+def improve_priority(my_heap, priority, value):
+    pos = is_present_value(heap, value)
+    if pos == -1:
+        return my_heap
+    elemento = al.get_element(my_heap["elements"], pos)
+    pqe.set_priority(elemento, priority)
+    swim(my_heap, pos)
+    return my_heap
 
-
-### !!!!FALTA!!!!! ###
-#def improve_priority(heap, priority, value):
-### !!!!FALTA!!!!! ###
