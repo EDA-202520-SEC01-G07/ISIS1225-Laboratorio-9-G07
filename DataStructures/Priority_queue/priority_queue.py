@@ -109,20 +109,19 @@ def sink(heap, pos):
     return heap
 
 def get_first_priority(heap):
-    elem = al.get_element(heap["elements"],1)
-    return pqe.get_value(elem)
+    if size(heap) >= 1:
+        return al.get_element(heap["elements"],1)["value"]
+    return None
+
 
 ### !!!!FALTA!!!!! ###
-def is_present_value(heap, value):
-    return None
-### !!!!FALTA!!!!! ###
-
-### !!!!FALTA!!!!! ###
-def contains(heap, value):
-    return None
+#def is_present_value(heap, value):
 ### !!!!FALTA!!!!! ###
 
 ### !!!!FALTA!!!!! ###
-def improve_priority(heap, priority, value):
-    return None
+#def contains(heap, value):
+### !!!!FALTA!!!!! ###
+
+### !!!!FALTA!!!!! ###
+#def improve_priority(heap, priority, value):
 ### !!!!FALTA!!!!! ###
