@@ -79,10 +79,11 @@ def remove(heap):
     if is_empty(heap):
         return None
     lista = heap["elements"]
+    elemento = al.get_element(lista, 1)
     al.exchange(lista, 1, al.size(lista)-1)
     al.remove_last(lista)
     sink(heap, 1)
-    return heap
+    return pqe.get_value(elemento)
 
 def sink(heap, pos):
     centinela = True
@@ -101,7 +102,7 @@ def sink(heap, pos):
                 prioritario = 2*pos+1
         
         if not priority(heap, padre, al.get_element(heap["elements"], prioritario)): #Si el hijo tiene más prioridad que el padre (False), el padre baja
-            exchange(heap, padre, prioritario)
+            exchange(heap, pos, prioritario)
             pos = prioritario
         else:
             centinela = False
