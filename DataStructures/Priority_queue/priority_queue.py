@@ -129,7 +129,7 @@ def contains(my_heap, value):
     return False
     
 def improve_priority(my_heap, priority, value):
-    pos = is_present_value(heap, value)
+    pos = is_present_value(my_heap, value)
     if pos == -1:
         return my_heap
     elemento = al.get_element(my_heap["elements"], pos)
