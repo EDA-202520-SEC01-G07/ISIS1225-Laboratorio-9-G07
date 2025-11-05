@@ -107,3 +107,22 @@ def sink(heap, pos):
         else:
             centinela = False
     return heap
+
+def get_first_priority(heap):
+    elem = al.get_element(heap["elements"],1)
+    return pqe.get_value(elem)
+
+### !!!!FALTA!!!!! ###
+def is_present_value(heap, value):
+    return None
+### !!!!FALTA!!!!! ###
+
+### !!!!FALTA!!!!! ###
+def contains(heap, value):
+    return None
+### !!!!FALTA!!!!! ###
+
+### !!!!FALTA!!!!! ###
+def improve_priority(heap, priority, value):
+    return None
+### !!!!FALTA!!!!! ###
