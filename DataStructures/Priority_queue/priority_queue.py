@@ -122,11 +122,13 @@ def is_present_value(heap, value):
             return i
     return -1
 
+def contains(heap, value):
+    pos = is_present_value(heap, value)
+    if pos != -1:
+        return True
+    return False
+    
 
-
-### !!!!FALTA!!!!! ###
-#def contains(heap, value):
-### !!!!FALTA!!!!! ###
 
 ### !!!!FALTA!!!!! ###
 #def improve_priority(heap, priority, value):
