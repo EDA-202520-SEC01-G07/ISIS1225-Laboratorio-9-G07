@@ -114,10 +114,15 @@ def get_first_priority(heap):
         return al.get_element(heap["elements"],1)["value"]
     return None
 
+def is_present_value(heap, value):
+    lista = heap["elements"]
+    for i in range(1, al.size(lista)):
+        elemento = al.get_element(lista, i)
+        if pqe.get_value(elemento) == value:
+            return i
+    return -1
 
-### !!!!FALTA!!!!! ###
-#def is_present_value(heap, value):
-### !!!!FALTA!!!!! ###
+
 
 ### !!!!FALTA!!!!! ###
 #def contains(heap, value):
